@@ -10,33 +10,31 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Zeus
+namespace Zeus.forms
 {
     /// <summary>
-    /// Interaktionslogik für MainWindow.xaml
+    /// Interaktionslogik für overview.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class overview : Window
     {
-        public MainWindow()
+        public overview()
         {
             InitializeComponent();
         }
 
-        private void Btn_login(object sender, RoutedEventArgs e)
+        private void Mi_close(object sender, RoutedEventArgs e)
         {
-            forms.overview ov = new forms.overview();
-            ov.Show();
-
             this.Close();
         }
 
-        private void Btn_settings(object sender, RoutedEventArgs e)
+
+        private void Mi_logout(object sender, RoutedEventArgs e)
         {
-            forms.Settings se = new forms.Settings();
-            se.Show();
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();  
+            this.Close();
         }
     }
 }
